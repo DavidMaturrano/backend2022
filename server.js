@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const serverless = require("serverless-http");
 
 /* var corsOptions = {
   origin: "http://localhost:4200",
@@ -22,3 +23,4 @@ app.set('port', PORT)
 
 
 module.exports = app;
+module.exports.handler = serverless(app);
