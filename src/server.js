@@ -11,12 +11,12 @@ app.use(cors());
 app.use(express.json());
 
 
-app.use("/api/auth", require("../routes/auth.routes"));
-app.use("/api/history", require("../routes/foodHistory.routes"));
-app.use("/api/patient", require("../routes/pacient.routes"));
-app.use("/api/treatment", require("../routes/treatment.routes"));
-app.use("/api/medic", require("../routes/medic.routes"));
-app.use("/api/food", require("../routes/food.routes"));
+app.use("/api/auth", require("./routes/auth.routes"));
+app.use("/api/history", require("./routes/foodHistory.routes"));
+app.use("/api/patient", require("./routes/pacient.routes"));
+app.use("/api/treatment", require("./routes/treatment.routes"));
+app.use("/api/medic", require("./routes/medic.routes"));
+app.use("/api/food", require("./routes/food.routes"));
 
 const PORT = process.env.PORT || 3000;
 app.set('port', PORT)
