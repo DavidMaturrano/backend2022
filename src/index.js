@@ -8,7 +8,7 @@ app.listen(app.get('port'), () => {
     console.log(`Servidor levantado en el puerto: ${app.get('port')}`);
 })
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     res.send("¿¿¿Funciona???")
   })
   
